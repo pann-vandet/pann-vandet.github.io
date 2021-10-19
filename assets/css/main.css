@@ -2682,8 +2682,8 @@ input, select, textarea {
 /* Main */
 
 	#main {
-		margin-left: 35%;
-		max-width: 54em;
+		margin-left: 25%;
+		max-width: 100%;
 		padding: 8em 4em 4em 4em;
 		width: calc(100% - 25%);
 	}
