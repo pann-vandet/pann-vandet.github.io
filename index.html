@@ -154,7 +154,7 @@
               </ul>
               <p><em>Other achievements</em></p>
               <ul>
-                <li>MDPI journal: <a href="https://www.mdpi.com/2076-3417/12/11/5590"> Affective Attention-Based Mechanism for Mask Face Recognition</a></li>
+                <li>MDPI journal (SCI): <a href="https://www.mdpi.com/2076-3417/12/11/5590"> Affective Attention-Based Mechanism for Mask Face Recognition</a></li>
                 <li>ACK2021 conference: <a href="http://kips.or.kr/bbs/confn/article/2009"> 딥러닝 기반의 새로운 마스크 얼굴 데이터 세트를 사용한 최신 얼굴 인식</a></li>
                 <li>2020 KCC Conference: <a href="https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE09874737"> 비디오 관제시스템에서 배경 검출과 Yolo기반의 이동객체의 탐지</a></li>
                 <li>Participated in research project: Korean historical management web application called <i>Gilsam</i> in Jeonju in 2019</li>
@@ -511,33 +511,45 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="name">Your Name</label>
-                  <input type="text" name="name" class="form-control" id="name" required>
+        
+            <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xvoyqldw" method="post" role="form" class="php-email-form">
+              
+              <fieldset id="fs-frm-inputs">
+                <div class="row">
+                  <div class="form-group col-md-6">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" name="name" id="full-name" class="form-control" placeholder="First and Last" required="">
+                  </div>
+  
+                  
+                  <div class="form-group col-md-6">
+                    <label for="email-address">Email Address</label>
+                    <input type="email" class="form-control" name="_replyto" id="email-address" placeholder="email@naver.com" required="">
+                  </div>
                 </div>
-                <div class="form-group col-md-6">
-                  <label for="name">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email" required>
-                </div>
-              </div>
+
               <div class="form-group">
-                <label for="name">Subject</label>
-                <input type="text" class="form-control" name="subject" id="subject" required>
-              </div>
-              <div class="form-group">
-                <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
-              </div>
+                <label for="message">Message</label>
+                <textarea rows="15" name="message" class="form-control" id="message" placeholder="" required=""></textarea>
+                <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+              </div>          
+              </fieldset>
               <div class="my-3">
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center"><input type="submit" value="Send Message" style="background: #149ddd;
+                border: 0;
+                padding: 10px 24px;
+                color: #fff;
+                transition: 0.4s;
+                border-radius: 4px;"></div>
             </form>
           </div>
+
+        
+      
 
         </div>
 
@@ -573,7 +585,7 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <!-- <script src="assets/vendor/php-email-form/validate.js"></script> -->
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
